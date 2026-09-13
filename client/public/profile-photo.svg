@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="Nehal Agarwal placeholder profile image">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d2436"/>
+      <stop offset="55%" stop-color="#0a1a26"/>
+      <stop offset="100%" stop-color="#061220"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#0e9bb4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="600" height="600" rx="120" fill="url(#bg)"/>
+  <rect width="600" height="600" rx="120" fill="url(#grid)"/>
+  <rect width="600" height="600" rx="120" fill="url(#glow)"/>
+
+  <!-- ECG trace -->
+  <g stroke="url(#teal)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.75">
+    <path d="M70 402 H196 l26 -46 l22 78 l26 -118 l24 86 l20 -34 H530"/>
+  </g>
+
+  <!-- Stethoscope -->
+  <g fill="none" stroke="url(#teal)" stroke-width="15" stroke-linecap="round">
+    <path d="M214 128 v66 a86 86 0 0 0 172 0 v-66"/>
+    <path d="M300 280 v46 a52 52 0 0 0 52 52 h14"/>
+  </g>
+  <circle cx="392" cy="378" r="30" fill="none" stroke="url(#teal)" stroke-width="14"/>
+  <circle cx="214" cy="122" r="13" fill="#5eead4"/>
+  <circle cx="386" cy="122" r="13" fill="#5eead4"/>
+
+  <!-- Initials -->
+  <text x="300" y="530" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif"
+        font-size="96" font-weight="800" letter-spacing="6" fill="#eaf7fb">NA</text>
+  <text x="300" y="568" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif"
+        font-size="24" font-weight="600" letter-spacing="9" fill="#7fa6b6">MBBS</text>
+</svg>

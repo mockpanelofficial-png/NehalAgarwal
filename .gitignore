@@ -1,0 +1,15 @@
+node_modules
+client/node_modules
+client/dist
+.env
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Secrets - never commit
+server/data/auth.json
+server/data/secret.env
+.env
+node_modules/
+client/dist/
+server/uploads/*
+!server/uploads/.gitkeep
