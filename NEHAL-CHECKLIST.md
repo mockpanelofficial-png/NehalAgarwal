@@ -1,136 +1,88 @@
-# ✅ Nehal Checklist — kya chahiye, kya ready hai
+# ✅ Nehal Checklist — v2 (actual-data-only rebuild)
 
-Ye site Nehal Agarwal ke **public LinkedIn profile** se li gayi information par bani hai.
-Jo cheezein LinkedIn par nahi thi, wo **khali ya placeholder** rakhi gayi hain — kuch bhi
-invented nahi kiya gaya.
+**Rule followed:** jo cheez Nehal ke LinkedIn profile / diye gaye details me nahi thi,
+wo site se **hata di gayi hai**. Ab har entry traceable hai — koi invented clinical
+posting, placeholder award ya speculative sample nahi bacha.
 
 ---
 
-## 1. LinkedIn se confirm ho chuka hai (site par laga diya gaya)
+## 1. Jo lag chuka hai (real data)
 
-| Cheez | Value | Kaha use hui |
+| Cheez | Value | Source |
 |---|---|---|
-| Naam | Nehal Agarwal (She/Her) | Hero, footer, meta tags, preloader |
-| Padhai | Final-Year MBBS | Hero tagline, stats, timeline, education entries |
-| College | Government Medical College, Chittorgarh | Education, clinical entries, location |
-| School | Sophia Secondary School | Education entry (`education-school`) |
-| Location | Chittorgarh, Rajasthan, India | Profile location |
-| Headline focus | Medical Content Writing · Healthcare Communication · Medical Education · Content Creation | Roles, writing entries, skills |
-| Open to work | Research Assistant, Medical Writer, Web Content Writer, Health Educator | 4 alag "Roles" entries + `open-to-work` highlight |
-| Services | Video Editing, Career Development Coaching, Leadership Development, Public Speaking, Editing, Content Strategy, Life Coaching, UX Writing, Writing | `services` entry + skills + leadership entries |
-| LinkedIn URL | https://www.linkedin.com/in/nehal-agarwal-6529a429a/ | Footer link, project entry proof |
+| Photo | `client/public/profile-photo.png` (clean crop, frame removed) | di gayi image |
+| Framed original | `client/public/profile-photo-linkedin-framed.png` (#OPENTOWORK version, archive) | di gayi image |
+| Email | nehalagarwal@gmail.com | diye gaye details |
+| Phone | +91 98979 49692 (contact section me `tel:` link ke saath) | diye gaye details |
+| Headline / tagline | Final-Year MBBS Student \| Medical Content Writing \| Healthcare Communication \| Medical Education \| Content Creation | LinkedIn headline |
+| Experience | Student, GMC Chittorgarh, Sep 2023 – Present (ICMR-STS research, TB/AIDS awareness competitions, 2nd class topper, fest organisation) | LinkedIn experience |
+| Education | MBBS, GMC Chittorgarh, Sep 2023 – May 2028 + activities; Sophia Secondary School | LinkedIn education |
+| Open to work | Research Assistant, Medical Writer, Web Content Writer, Health Educator | LinkedIn open-to-work |
+| Services (9) | Writing, Editing, Content Strategy, UX Writing, Video Editing, Public Speaking, Career Development Coaching, Leadership Development, Life Coaching | LinkedIn services |
+| Skills (chips) | Medical Writing, Health Writing, Writing For The Web, Web Content, Health Promotion, Wellness Education, Written Communication, Clinical Research, Presentation Skills, Creative Content Creation | LinkedIn skills |
+| Recommendation | Ayesha Agarwal (KPMG Valuation, CFA L1, ex-JP Morgan), 3 Sep 2026 — verbatim quote | LinkedIn recommendation |
+| ICMR-STS project | AI-assisted peripheral blood smear screening + rural healthcare empowerment | LinkedIn education activities |
+| Awards | 2nd class topper (1st prof year); AIDS poster winner; TB poster 2nd | LinkedIn |
+| Presentations | Academic topics in Microbiology | LinkedIn |
+| Leadership | Medical college fest activities organisation | LinkedIn |
+
+**Site structure:** 13 entries · 6 highlights · 5-step timeline · 9 categories.
 
 ---
 
-## 2. MBBS curriculum se standard structure (verify karwa lein)
+## 2. v1 se kya-kya HATAYA gaya (unwanted content)
 
-Ye **NMC CBME curriculum** ka standard sequence hai — har MBBS student ka yahi hota hai.
-Fir bhi exact years Nehal se confirm karwa lein:
-
-- **Phase I (2022)** — Anatomy, Physiology, Biochemistry
-- **Phase II (2023)** — Pathology, Microbiology, Pharmacology
-- **Phase III Part 1 (2024)** — ENT, Ophthalmology, FMT, Community Medicine (RHTC/URHC)
-- **Phase III Part 2 (2025)** — Medicine, Surgery, OBG, Paediatrics
-- **Final year (2026)** + 12-month CRMI internship
-
-> Admission year `2022` maana gaya hai. Agar Nehal ka batch alag hai to **admin panel → Timeline**
-> me saal badal dein (aur education entries me `2022–2026` update karein).
+- ❌ 8 invented clinical posting entries (Medicine/Surgery/OBG/Paediatrics/PSM/ENT/Para/Pre-clinical) — LinkedIn par nahi the
+- ❌ Generic research-interest / evidence-based-practice entries
+- ❌ 5 speculative writing-sample entries (patient education, exam content, web articles, editing, video)
+- ❌ 3 generic health-education entries, 3 generic volunteering entries, 2 generic leadership entries
+- ❌ 3 programs entries (skills lab/AETCOM, ECE, self-learning)
+- ❌ Placeholder slots: `cert-slot`, `award-slot`, `media-slot`
+- ❌ 4 alag target-role entries + content-library/portfolio-project entries
+- ✅ Retained (real): ICMR-STS, rank, 2 posters, MBBS, Sophia, open-to-work, services, Microbiology presentations, fest organisation, 2 focus entries (headline+skills se), recommendation
 
 ---
 
-## 3. ⚠️ Nehal se chahiye — ye bharna zaroori hai
+## 3. ⚠️ Ab bhi confirm karna hai (chhote items)
 
-### A. Photo
-- [ ] Nehal ki professional photo → `client/public/profile-photo.png` naam se save karo
-      (admin panel se bhi upload kar sakte hain)
-- Abhi medical placeholder SVG laga hai (stethoscope + ECG + `NA`)
+1. **Rank contradiction:** experience + education me "2nd / 2nd class topper", About me
+   "Ranked first in the MBBS first year". Site par **2nd** likha hai (2 sources vs 1).
+   Entry me `CONFIRM:` note hai — Nehal se exact rank pooch lein.
+2. **ICMR-STS:** project start year, guide ka naam, status (ongoing/submitted/published).
+3. **Posters:** organising body, event name, year + certificate/poster images (proof attach karein).
+4. **Education:** LinkedIn par total **5 education entries** hain — sirf 2 visible thi;
+   baaki 3 add kar sakte hain.
+5. **Sophia Secondary School:** board, year, percentage (optional).
+6. **Skills ke %:** skill bars self-assessed hain (naam LinkedIn se, percentage subjective) —
+   admin → Profile se badal sakte hain.
+7. **Writing samples:** jab published links/PDF mil jayein, Writing entry me proof attach karein.
 
-### B. Contact
-- [ ] **Email** — abhi `your.email@example.com` placeholder hai
-- [ ] **Phone** (optional)
-- [ ] **Resume/CV link** (optional — `site.resumeUrl`)
-
-### C. Exact academic details
-- [ ] MBBS admission batch / university name
-- [ ] School: city, board (CBSE/RBSE/ICSE), year, percentage
-- [ ] Elective subject (Phase III)
-- [ ] Koi external BLS/ACLS certification
-
-### D. Achievements — sabse important
-- [ ] Certificates (courses, workshops, conferences) — image/PDF
-- [ ] Awards, distinctions, competition results
-- [ ] Publications / posters / paper presentations
-- [ ] Published articles ke links
-- [ ] Health camps — naam, jagah, date, kitne patients
-- [ ] Leadership positions (societies, committees, events)
-
-> In 4 cheezon ke liye admin panel me 3 **placeholder entries** pehle se bani hain:
-> `cert-slot` (Certifications), `award-slot` (Awards), `media-slot` (Media).
-> Har certificate ke liye entry duplicate karke proof attach kar dein.
-
----
-
-## 4. Content me `CONFIRM:` notes
-
-11 entries me `CONFIRM:` note chhoda gaya hai — matlab "yaha real detail daalni hai".
-Sab ek saath dekhne ke liye:
-
+Sab ek command se:
 ```bash
 python3 scripts/list_todos.py
 ```
 
 ---
 
-## 5. Site me kya-kya hai (44 entries)
-
-| Category | Entries | Kya hai |
-|---|---|---|
-| Clinical | 8 | Medicine, Surgery, OBG, Paediatrics, PSM/RHTC, ENT-Ophthal-FMT, Para-clinical, Pre-clinical |
-| Writing | 6 | Patient education, medical education, web health, editing/strategy, video content |
-| Roles | 6 | Open to work + 4 target roles + services |
-| Health Education | 4 | Practice, vernacular Hindi, priority topics |
-| Education | 3 | MBBS, school |
-| Volunteering | 3 | Camps, awareness, peer mentoring |
-| Leadership | 3 | Public speaking, organising, coaching |
-| Programs | 3 | Skills lab/AETCOM, ECE/electives, self-learning |
-| Research | 2 | Interests & appraisal, evidence-based practice |
-| Projects | 2 | This portfolio, content library |
-| Certifications / Awards / Media | 3 | Placeholder — Nehal bharegi |
-| Community Health | 1 | RHTC/URHC field training |
-
-**Timeline:** 5 steps (2022 → 2026) — hero section me dikhta hai.
-
----
-
-## 6. Nehal ko bhejne se pehle final check
+## 4. Nehal ko bhejne se pehle final check
 
 ```bash
-# 1. site chalao
 npm install
-npm run dev
-
-# 2. content check
+npm run dev          # site: :5173  ·  admin: :5173/admin  (admin / portfolio2026)
 python3 scripts/list_todos.py
-
-# 3. browser me kholo
-#    http://localhost:5173        -> site
-#    http://localhost:5173/admin  -> admin (admin / portfolio2026)
 ```
 
-- [ ] Photo lag gayi
-- [ ] Email/phone bhar diya
-- [ ] Batch years confirm
-- [ ] Kam se kam 2-3 real certificates/proofs attach
-- [ ] Placeholder entries (`cert-slot`, `award-slot`, `media-slot`) fill ya delete
-- [ ] Dark + light theme dono check
-- [ ] Mobile par check
-- [ ] Contact form submit karke admin → Inbox me message aaya ya nahi
+- [x] Real photo (clean crop) lagi hui
+- [x] Email + phone contact section me
+- [x] Sirf actual LinkedIn data — 13 entries
+- [ ] Rank confirm (1st ya 2nd)
+- [ ] Certificates/poster images proof ke roop me attach
+- [ ] Dark + light theme, mobile check
+- [ ] Contact form → admin Inbox test
 
 ---
 
-## 7. Deploy ke baad
+## 5. Deploy
 
-- Admin password + JWT secret change (`.env` me)
-- MongoDB Atlas connect ( warna redeploy par edits reset)
-- Cloudinary set (warna certificate uploads redeploy par gayab)
-- Full guide: `DEPLOY-GUIDE.md`
+Full guide: `DEPLOY-GUIDE.md` (Render + MongoDB Atlas + Cloudinary).
+Deploy se pehle: `ADMIN_PASSWORD` + `JWT_SECRET` change karein.

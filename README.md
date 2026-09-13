@@ -45,16 +45,22 @@ The admin panel is **not shown in the navigation**. Open it by typing the URL:
 These demo credentials are used only when environment variables are absent.
 **Set secure credentials before deployment.**
 
-## Content status — read `NEHAL-CHECKLIST.md`
+## Content policy — actual data only
 
-All content is editable from the admin panel, but a few things still need Nehal's input:
+Every entry on the site traces back to Nehal's own LinkedIn profile (headline, about,
+experience, education activities, skills, services, open-to-work, recommendation) or to
+contact details she supplied. Nothing is invented. Where her own profile is ambiguous
+(e.g. rank "2nd" in experience vs "first" in about), a `CONFIRM:` note marks it inside
+the entry so it can be corrected from the admin panel.
 
-- profile photo (currently a medical `NA` placeholder at `client/public/profile-photo.svg`)
-- email / phone / location
-- exact MBBS batch years, university name and marks
-- certificates, awards, publications, camp details
+Run this to print every open item before sharing the site:
 
-Run `python3 scripts/list_todos.py` to print every `CONFIRM:` note embedded in the content.
+```bash
+python3 scripts/list_todos.py
+```
+
+See `NEHAL-CHECKLIST.md` for the full source-map (what came from where) and the list of
+speculative v1 content that was removed.
 
 ## MongoDB and production configuration
 
