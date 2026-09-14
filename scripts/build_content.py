@@ -442,6 +442,9 @@ import re as _re
 for _it in items:
     _it["description"] = _re.sub(r"\s*CONFIRM:.*$", "", _it["description"], flags=_re.S).rstrip()
 
+# Newest first — current status always on top of the journey timeline.
+timeline = list(reversed(timeline))
+
 data = {"items": items, "site": site, "timeline": timeline}
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False))

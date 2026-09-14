@@ -394,19 +394,9 @@
   },
   "timeline": [
     {
-      "date": "Sep 2023",
-      "title": "MBBS begins at GMC Chittorgarh",
-      "text": "Joined the MBBS programme at Government Medical College, Chittorgarh (Sep 2023 batch, expected 2028), after schooling at Sophia Secondary School."
-    },
-    {
-      "date": "1st Prof",
-      "title": "2nd class topper — first professional year",
-      "text": "Ranked 2nd in the first year of MBBS, building the academic foundation she continues to carry through the course."
-    },
-    {
-      "date": "MBBS",
-      "title": "ICMR-STS research & academic presentations",
-      "text": "Conducted an ICMR-STS research project on AI-assisted peripheral blood smear screening and approaches to empowering rural healthcare; presented academic topics in Microbiology."
+      "date": "Present",
+      "title": "Final year, writing focus & open to work",
+      "text": "Final-year MBBS student focused on healthcare communication, medical education and content creation — open to Research Assistant, Medical Writer, Web Content Writer and Health Educator roles."
     },
     {
       "date": "MBBS",
@@ -414,9 +404,19 @@
       "text": "Winner of an AIDS awareness poster-making competition, 2nd place in a tuberculosis awareness poster-making competition, and organisation of activities in medical college fests."
     },
     {
-      "date": "Present",
-      "title": "Final year, writing focus & open to work",
-      "text": "Final-year MBBS student focused on healthcare communication, medical education and content creation — open to Research Assistant, Medical Writer, Web Content Writer and Health Educator roles."
+      "date": "MBBS",
+      "title": "ICMR-STS research & academic presentations",
+      "text": "Conducted an ICMR-STS research project on AI-assisted peripheral blood smear screening and approaches to empowering rural healthcare; presented academic topics in Microbiology."
+    },
+    {
+      "date": "1st Prof",
+      "title": "2nd class topper — first professional year",
+      "text": "Ranked 2nd in the first year of MBBS, building the academic foundation she continues to carry through the course."
+    },
+    {
+      "date": "Sep 2023",
+      "title": "MBBS begins at GMC Chittorgarh",
+      "text": "Joined the MBBS programme at Government Medical College, Chittorgarh (Sep 2023 batch, expected 2028), after schooling at Sophia Secondary School."
     }
   ]
 }
