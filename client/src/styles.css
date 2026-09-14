@@ -945,3 +945,14 @@ header.scrolled{background:rgba(10,20,36,.82);backdrop-filter:blur(20px);-webkit
 [data-theme="light"] .snapshot-chips span{background:linear-gradient(145deg,#eafcff,#dff5f9);border-color:#b7e4ec;color:#0e94ad;box-shadow:0 4px 14px #0f4c5c10,inset 0 0 10px #0e94ad08}
 [data-theme="light"] .snapshot-chips span::before{background:#0e94ad;box-shadow:0 0 8px #0e94ad}
 [data-theme="light"] .snapshot-chips span:hover{border-color:#0e94ad;color:#0891b2;box-shadow:0 0 18px #0e94ad2e}
+
+/* ==== Photo on preloader + home hero (v2.1) ==== */
+.preloader-logo{overflow:hidden}
+.preloader-logo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:inherit;display:block}
+.intro-face{width:96px;height:96px;border-radius:50%;padding:5px;background:linear-gradient(145deg,#5eead4,#0e9bb4);box-shadow:0 0 0 6px #0e9bb422,0 16px 36px #0e9bb43d;margin:0 0 20px;animation:facePulse 2.8s ease-in-out infinite}
+.intro-face img{width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:50%;border:3px solid #07101f;display:block}
+@keyframes facePulse{0%,100%{box-shadow:0 0 0 6px #0e9bb422,0 16px 36px #0e9bb43d}50%{box-shadow:0 0 0 11px #0e9bb412,0 16px 44px #0e9bb455}}
+[data-theme="light"] .intro-face img{border-color:#ffffff}
+[data-theme="light"] .intro-face{box-shadow:0 0 0 6px #0e9bb41a,0 16px 36px #0e9bb42e}
+@media(max-width:600px){.intro-face{width:78px;height:78px;padding:4px;margin-bottom:16px}}
+@media(prefers-reduced-motion:reduce){.intro-face{animation:none}}
