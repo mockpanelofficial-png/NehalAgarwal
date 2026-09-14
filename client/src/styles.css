@@ -952,7 +952,7 @@ header.scrolled{background:rgba(10,20,36,.82);backdrop-filter:blur(20px);-webkit
 
 /* ==== v2.2 — premium mobile layout pass ==== */
 /* Tablet & mobile: hero becomes ONE clean column, photo card first */
-@media(max-width:900px){
+@media(max-width:1024px){
   .hero{grid-template-columns:1fr;gap:12px;padding-top:30px}
   .hero .profile{order:-1;min-height:0;padding:0 0 4px;place-items:center;align-self:start}
   .hero .profile{padding:0 0 4px}
@@ -962,10 +962,13 @@ header.scrolled{background:rgba(10,20,36,.82);backdrop-filter:blur(20px);-webkit
   .hero-journey{padding-right:0}
   .hero h1.intro-title{white-space:normal;font-size:clamp(30px,8.4vw,46px);line-height:1.06;margin-bottom:14px}
   .hero-role{margin-bottom:34px}
-  .journey-intro{font-size:15px;line-height:1.6;margin-bottom:22px}
+  .journey-intro{font-size:15.5px;line-height:1.65;margin-bottom:22px;max-width:780px}
+  .hero-timeline{max-width:860px}
   .hero-timeline article{grid-template-columns:64px 1fr;gap:16px}
   .hero-timeline:before{left:64px}
   .hero-timeline article:after{left:59px}
+  .hero-timeline h3{font-size:18px}
+  .hero-timeline p{font-size:14px;max-width:780px}
   .student-snapshot{grid-template-columns:1fr;padding:46px 0 22px;gap:24px}
   .snapshot-cards{grid-template-columns:repeat(2,1fr)}
   .snapshot-cards article{min-height:200px}
@@ -1038,3 +1041,12 @@ section[id]{scroll-margin-top:86px}
 html{scrollbar-color:#9db6c2 #eef4f6}
 [data-theme="dark"] html,[data-theme="dark"]{scrollbar-color:#2a3f5c #0b1628}
 @media(prefers-reduced-motion:reduce){.type-cursor{animation:none}.to-top{transition:none}}
+
+/* ==== v2.4 — desktop balance: photo side-by-side only on large screens ==== */
+@media(min-width:1025px) and (max-width:1240px){
+  .hero{grid-template-columns:1.35fr .65fr;gap:28px}
+  .hero .profile .avatar{width:min(340px,86%)}
+  .hero .profile .orb{width:min(392px,94%)}
+  .journey-intro{max-width:none}
+  .hero-timeline p{max-width:none}
+}
