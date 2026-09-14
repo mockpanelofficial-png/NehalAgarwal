@@ -952,7 +952,7 @@ header.scrolled{background:rgba(10,20,36,.82);backdrop-filter:blur(20px);-webkit
 
 /* ==== v2.2 — premium mobile layout pass ==== */
 /* Tablet & mobile: hero becomes ONE clean column, photo card first */
-@media(max-width:1024px){
+@media(max-width:1240px){
   .hero{grid-template-columns:1fr;gap:12px;padding-top:30px}
   .hero .profile{order:-1;min-height:0;padding:0 0 4px;display:grid;place-items:center;justify-items:center;align-self:start;width:100%}
   .hero .profile .orb{width:clamp(276px,58vw,482px);top:50%;left:50%;right:auto;margin:0;transform:translate(-50%,-50%)}
@@ -1042,11 +1042,23 @@ html{scrollbar-color:#9db6c2 #eef4f6}
 [data-theme="dark"] html,[data-theme="dark"]{scrollbar-color:#2a3f5c #0b1628}
 @media(prefers-reduced-motion:reduce){.type-cursor{animation:none}.to-top{transition:none}}
 
-/* ==== v2.4 — desktop balance: photo side-by-side only on large screens ==== */
-@media(min-width:1025px) and (max-width:1240px){
-  .hero{grid-template-columns:1.35fr .65fr;gap:28px}
-  .hero .profile .avatar{width:min(340px,86%)}
-  .hero .profile .orb{width:min(392px,94%)}
-  .journey-intro{max-width:none}
-  .hero-timeline p{max-width:none}
+
+/* ==== v2.6 — tablet range: photo top-center, richer grids ==== */
+@media(min-width:901px) and (max-width:1240px){
+  .hero{gap:18px;padding-top:40px}
+  .hero .profile .avatar{width:clamp(300px,38vw,460px)}
+  .hero .profile .orb{width:clamp(340px,43vw,512px)}
+  .journey-intro{max-width:860px;font-size:16.5px}
+  .hero-timeline{max-width:980px}
+  .hero h1.intro-title{font-size:clamp(40px,5vw,64px)}
+  .features{grid-template-columns:repeat(3,1fr)}
+  .feature{min-height:300px}
+  .snapshot-cards{grid-template-columns:repeat(3,1fr)}
+  .snapshot-cards article{min-height:225px}
+  .skills-grid{grid-template-columns:1fr 1fr}
+  .section{padding:64px 0}
+}
+/* true desktop only: photo side-by-side */
+@media(min-width:1241px){
+  .hero{grid-template-columns:1.25fr .75fr}
 }
