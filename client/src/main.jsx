@@ -41,7 +41,6 @@ function App(){
  <main id="main-content">
   <section className="hero wrap" id="journey">
   <div className="hero-journey">
-    <div className="intro-face"><img src={`${s.profileImage||'/profile-photo.png'}?v=20260914`} alt={`${s.name} — final-year MBBS student`} onError={e=>{const w=e.currentTarget.closest('.intro-face');if(w)w.style.display='none'}}/></div>
     <h1 className="intro-title">Hi, I'm <em>{s.name}</em></h1>
     <TypingRole roles={s.roles}/>
     <p className="journey-intro">{s.lede}</p>
@@ -49,7 +48,7 @@ function App(){
     <div className="hero-timeline">{data.timeline.map((x,i)=><article key={i}><div className="hero-year">{x.date}</div><div><h3>{x.title}</h3><p>{x.text}</p></div></article>)}</div>
   </div>
   <aside className="profile">
-    <div className="avatar"><img src={`${s.profileImage||'/profile-photo.svg'}?v=20260914`} alt={`${s.name} profile photo`} onError={e=>{e.currentTarget.src='/profile-photo.svg?v=20260914b'}}/></div>
+    <div className="avatar"><img src={`${s.profileImage||'/profile-photo.png'}?v=20260914`} alt={`${s.name} — final-year MBBS student, Government Medical College Chittorgarh`} width="400" height="400" loading="eager" fetchPriority="high" decoding="async" onError={e=>{e.currentTarget.src='/profile-photo.svg?v=20260914b'}}/></div>
     <div className="profile-copy"><h2>{s.name}</h2><p>{s.tagline}</p><div className="stats">{[1,2,3].map(n=><div key={n}><CountUp value={s[`stat${n}v`]}/><small>{s[`stat${n}l`]}</small></div>)}</div></div>
   </aside>
 </section>

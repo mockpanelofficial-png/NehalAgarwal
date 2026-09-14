@@ -949,10 +949,60 @@ header.scrolled{background:rgba(10,20,36,.82);backdrop-filter:blur(20px);-webkit
 /* ==== Photo on preloader + home hero (v2.1) ==== */
 .preloader-logo{overflow:hidden}
 .preloader-logo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:inherit;display:block}
-.intro-face{width:96px;height:96px;border-radius:50%;padding:5px;background:linear-gradient(145deg,#5eead4,#0e9bb4);box-shadow:0 0 0 6px #0e9bb422,0 16px 36px #0e9bb43d;margin:0 0 20px;animation:facePulse 2.8s ease-in-out infinite}
-.intro-face img{width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:50%;border:3px solid #07101f;display:block}
-@keyframes facePulse{0%,100%{box-shadow:0 0 0 6px #0e9bb422,0 16px 36px #0e9bb43d}50%{box-shadow:0 0 0 11px #0e9bb412,0 16px 44px #0e9bb455}}
-[data-theme="light"] .intro-face img{border-color:#ffffff}
-[data-theme="light"] .intro-face{box-shadow:0 0 0 6px #0e9bb41a,0 16px 36px #0e9bb42e}
-@media(max-width:600px){.intro-face{width:78px;height:78px;padding:4px;margin-bottom:16px}}
-@media(prefers-reduced-motion:reduce){.intro-face{animation:none}}
+
+/* ==== v2.2 — premium mobile layout pass ==== */
+/* Tablet & mobile: hero becomes ONE clean column, photo card first */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:24px;padding-top:34px}
+  .hero .profile{order:-1;min-height:0;padding:0 0 4px;place-items:center;align-self:start}
+  .hero .profile .orb{width:min(300px,70%);top:6px}
+  .hero .profile .avatar{width:min(250px,58%);border-width:4px}
+  .hero-journey{padding-right:0}
+  .hero h1.intro-title{white-space:normal;font-size:clamp(30px,8.4vw,46px);line-height:1.06;margin-bottom:14px}
+  .hero-role{margin-bottom:34px}
+  .journey-intro{font-size:15px;line-height:1.6;margin-bottom:22px}
+  .hero-timeline article{grid-template-columns:64px 1fr;gap:16px}
+  .hero-timeline:before{left:64px}
+  .hero-timeline article:after{left:59px}
+  .student-snapshot{grid-template-columns:1fr;padding:46px 0 22px;gap:24px}
+  .snapshot-cards{grid-template-columns:repeat(2,1fr)}
+  .snapshot-cards article{min-height:200px}
+  .features{grid-template-columns:1fr}
+  .feature{min-height:230px}
+  .section{padding:54px 0}
+  .section-head{display:block}
+  .section-head p{margin-top:12px;max-width:none}
+  .skills-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .hero{padding-top:26px}
+  .hero .profile{padding:0}
+  .hero .profile .avatar{width:min(225px,62%)}
+  .hero .profile .orb{width:min(260px,72%)}
+  .hero h1.intro-title{font-size:clamp(27px,8vw,36px)}
+  .snapshot-cards{grid-template-columns:1fr}
+  .snapshot-cards article{min-height:0}
+  .stats div{padding:10px 4px}
+  .stats b{font-size:16px}
+  .stats small{font-size:8.5px}
+  .card{padding:20px}
+  .card h3{font-size:21px}
+  .feature{min-height:210px;padding:22px}
+  .ticker div{gap:26px;font-size:11px;padding:14px 0}
+  .contact-heading h2{font-size:30px}
+  .manifesto{padding:26px}
+  .manifesto h2{font-size:20px}
+  .detail-title{font-size:25px}
+  .longcopy{font-size:14.5px}
+  .profile h2{font-size:24px}
+}
+/* very small phones — nothing overflows */
+@media(max-width:400px){
+  .hero h1.intro-title{font-size:26px}
+  .hero .profile .avatar{width:min(200px,66%)}
+  .hero .profile .orb{width:min(232px,76%)}
+  .actions .button{padding:11px 15px;font-size:13.5px}
+  .stats b{font-size:14.5px}
+}
+/* horizontal overflow guard */
+html,body{overflow-x:clip}

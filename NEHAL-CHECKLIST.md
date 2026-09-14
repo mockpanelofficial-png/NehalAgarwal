@@ -47,7 +47,7 @@ posting, placeholder award ya speculative sample nahi bacha.
 
 1. **Rank contradiction:** experience + education me "2nd / 2nd class topper", About me
    "Ranked first in the MBBS first year". Site par **2nd** likha hai (2 sources vs 1).
-   Entry me `CONFIRM:` note hai — Nehal se exact rank pooch lein.
+   Ye note ab site par nahi dikhta (production copy clean hai) — yahan track ho raha hai; Nehal se exact rank pooch lein.
 2. **ICMR-STS:** project start year, guide ka naam, status (ongoing/submitted/published).
 3. **Posters:** organising body, event name, year + certificate/poster images (proof attach karein).
 4. **Education:** LinkedIn par total **5 education entries** hain — sirf 2 visible thi;
@@ -56,6 +56,8 @@ posting, placeholder award ya speculative sample nahi bacha.
 6. **Skills ke %:** skill bars self-assessed hain (naam LinkedIn se, percentage subjective) —
    admin → Profile se badal sakte hain.
 7. **Writing samples:** jab published links/PDF mil jayein, Writing entry me proof attach karein.
+
+Ye notes public site par nahi chhape jate (build script unhe descriptions se strip kar deta hai) — sirf yahan track hote hain.
 
 Sab ek command se:
 ```bash

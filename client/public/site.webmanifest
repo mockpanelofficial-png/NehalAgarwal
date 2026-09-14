@@ -1,0 +1,12 @@
+{
+  "name": "Nehal Agarwal — Final-Year MBBS Student & Medical Writer",
+  "short_name": "Nehal Agarwal",
+  "description": "Medical portfolio of Nehal Agarwal — ICMR-STS research, medical content writing, healthcare communication and medical education.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1a26",
+  "theme_color": "#0a1a26",
+  "icons": [
+    { "src": "/profile-photo.png", "sizes": "296x296", "type": "image/png", "purpose": "any" }
+  ]
+}

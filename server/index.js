@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const compression = require('compression');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
@@ -37,6 +38,7 @@ const LOCK_MINUTES = 15;
 app.set('trust proxy', 1);
 
 app.disable('x-powered-by');
+app.use(compression());
 app.use((req, res, next) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('X-Frame-Options', 'SAMEORIGIN');
@@ -259,7 +261,19 @@ app.delete('/api/upload', auth, async (req, res, next) => {
 const clientDist = path.join(__dirname, '..', 'client', 'dist');
 if (fs.existsSync(clientDist)) {
   app.get('/authwall', (req, res) => res.redirect('/'));
-  app.use(express.static(clientDist));
+  app.use(
+    express.static(clientDist, {
+      setHeaders(res, filePath) {
+        if (filePath.includes(`${path.sep}assets${path.sep}`)) {
+          res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        } else if (/\.(png|jpe?g|svg|webp|woff2?)$/.test(filePath)) {
+          res.setHeader('Cache-Control', 'public, max-age=604800');
+        } else {
+          res.setHeader('Cache-Control', 'no-cache');
+        }
+      },
+    })
+  );
   app.use((req, res, next) =>
     req.method === 'GET' && !req.path.startsWith('/api') ? res.sendFile(path.join(clientDist, 'index.html')) : next()
   );

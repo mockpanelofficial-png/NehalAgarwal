@@ -306,7 +306,7 @@ items = [
         "poster addressed TB recognition, treatment completion and community awareness \u2014 "
         "aligned with national TB-elimination messaging. CONFIRM: add the organising body, event "
         "name and year, and attach the certificate or poster image as proof.",
-        True,
+        False,
     ),
     # ------------------------------------------------------------ education
     item(
@@ -435,6 +435,12 @@ items = [
         "solutions to solve a problem. She is a best package of creativity and intelligence.\u201d",
     ),
 ]
+
+# Production rule: internal CONFIRM notes never ship in public copy.
+# (They stay tracked in NEHAL-CHECKLIST.md / scripts/list_todos.py instead.)
+import re as _re
+for _it in items:
+    _it["description"] = _re.sub(r"\s*CONFIRM:.*$", "", _it["description"], flags=_re.S).rstrip()
 
 data = {"items": items, "site": site, "timeline": timeline}
 OUT.parent.mkdir(parents=True, exist_ok=True)
