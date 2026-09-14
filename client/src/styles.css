@@ -954,11 +954,11 @@ header.scrolled{background:rgba(10,20,36,.82);backdrop-filter:blur(20px);-webkit
 /* Tablet & mobile: hero becomes ONE clean column, photo card first */
 @media(max-width:1024px){
   .hero{grid-template-columns:1fr;gap:12px;padding-top:30px}
-  .hero .profile{order:-1;min-height:0;padding:0 0 4px;place-items:center;align-self:start}
-  .hero .profile{padding:0 0 4px}
-  .hero .profile .orb{width:clamp(276px,58vw,482px);top:50%;left:50%;transform:translate(-50%,-50%)}
-  .hero .profile .avatar{width:clamp(240px,52vw,430px);border-width:5px}
-  [data-theme="light"] .hero .profile{padding:22px 18px}
+  .hero .profile{order:-1;min-height:0;padding:0 0 4px;display:grid;place-items:center;justify-items:center;align-self:start;width:100%}
+  .hero .profile .orb{width:clamp(276px,58vw,482px);top:50%;left:50%;right:auto;margin:0;transform:translate(-50%,-50%)}
+  .hero .profile .avatar{width:clamp(240px,52vw,430px);border-width:5px;margin:0 auto;justify-self:center}
+  [data-theme="light"] .hero .profile{padding:22px 18px;place-items:center;justify-items:center}
+  [data-theme="light"] .hero .profile .avatar{margin:6px auto 14px}
   .hero-journey{padding-right:0}
   .hero h1.intro-title{white-space:normal;font-size:clamp(30px,8.4vw,46px);line-height:1.06;margin-bottom:14px}
   .hero-role{margin-bottom:34px}
