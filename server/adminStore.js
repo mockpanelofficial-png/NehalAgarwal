@@ -51,6 +51,16 @@ async function getAdmin() {
   return { username: 'admin', passwordHash: 'portfolio2026' };
 }
 
+async function setAdminUsername(username) {
+  if (mongoose.connection.readyState === 1) {
+    await Admin.findOneAndUpdate({ key: 'admin' }, { username }, { upsert: true });
+    return;
+  }
+  const current = readAuthFile() || envAdmin();
+  if (!current) throw new Error('No admin configured');
+  writeAuthFile({ username, passwordHash: current.passwordHash });
+}
+
 async function setAdminPassword(username, passwordHash) {
   if (mongoose.connection.readyState === 1) {
     await Admin.findOneAndUpdate(
@@ -63,4 +73,4 @@ async function setAdminPassword(username, passwordHash) {
   writeAuthFile({ username, passwordHash });
 }
 
-module.exports = { getAdmin, setAdminPassword };
+module.exports = { getAdmin, setAdminPassword, setAdminUsername };

@@ -10,7 +10,7 @@ const path = require('path');
 const fs = require('fs');
 const auth = require('./middleware/auth');
 const store = require('./store');
-const { getAdmin, setAdminPassword } = require('./adminStore');
+const { getAdmin, setAdminPassword, setAdminUsername } = require('./adminStore');
 const { jwtSecret, useCloudinary, cloudinaryFolder, allowedOrigins } = require('./config');
 const Message = require('./models/Message');
 
@@ -141,6 +141,26 @@ app.post('/api/auth/password', auth, async (req, res, next) => {
 
     await setAdminPassword(admin.username, await bcrypt.hash(nextPw, 10));
     res.json({ ok: true, message: 'Password updated successfully' });
+  } catch (e) {
+    next(e);
+  }
+});
+
+app.post('/api/auth/username', auth, async (req, res, next) => {
+  try {
+    const admin = await getAdmin();
+    const hash = admin.passwordHash || '';
+    const ok = hash.startsWith('$2')
+      ? await bcrypt.compare(String(req.body.current || ''), hash)
+      : String(req.body.current || '') === hash;
+    if (!ok) return res.status(401).json({ message: 'Current password is incorrect' });
+
+    const nextU = String(req.body.next || '').trim();
+    if (nextU.length < 3 || nextU.length > 32 || !/^[a-zA-Z0-9._-]+$/.test(nextU)) {
+      return res.status(400).json({ message: 'Username must be 3-32 chars: letters, numbers, . _ -' });
+    }
+    await setAdminUsername(nextU);
+    res.json({ ok: true, message: 'Username updated — use it at next sign-in' });
   } catch (e) {
     next(e);
   }

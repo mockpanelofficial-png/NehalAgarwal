@@ -40,7 +40,8 @@ npm run dev
 | 🌐 **Website** | http://localhost:5173 |
 | 🔐 **Admin panel** | http://localhost:5173/admin |
 
-**Admin login:** `admin` / `portfolio2026`
+**Admin login:** `nehal` / `Nehal@2026`  
+> Password/username badalna ho: Admin → **Settings** → change forms (current password chahiye).
 
 > 💡 `npm run dev` ek saath 2 cheezein chalata hai:
 > - Express API → port `5000`
@@ -124,7 +125,7 @@ npm start
 ## 🔑 Admin Panel — sab kuch yaha se edit hota hai
 
 - URL me `/admin` type karo (ya footer me 🔒 Admin link)
-- Login: `admin` / `portfolio2026`
+- Login: `nehal` / `Nehal@2026` (`.env` me set hai; Settings se change kar sakte ho)
 - Admin me **sab kuch edit** kar sakte ho:
   - **Entries** — portfolio entries add/edit/delete + certificate/photo/link proof attach
   - **Profile & hero** — naam, tagline, photo, stats, interests, profile cards, skills
@@ -133,7 +134,8 @@ npm start
   - **Inbox** — contact form se aaye messages
   - **Settings** — SEO title/description, default theme, password change
 
-> ⚠️ Deploy karne se pehle `.env` me `ADMIN_PASSWORD` aur `JWT_SECRET` zaroor badlo!
+> ⚠️ Deploy karne se pehle Render/Railway env me `ADMIN_PASSWORD` aur `JWT_SECRET` ki nayi values set karo,
+> ya panel ke Settings se password badal lo (bcrypt hash ban jayega).
 
 ---
 

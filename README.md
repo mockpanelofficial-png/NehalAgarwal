@@ -34,16 +34,22 @@ npm run dev
 
 Vite proxies `/api` and `/uploads` to Express.
 
-## Demo administrator
+## Administrator login
 
-The admin panel is **not shown in the navigation**. Open it by typing the URL:
+Production credentials live in `.env` (gitignored) and are seeded on first start:
 
 - URL: append `/admin` to the site address — e.g. `http://localhost:5173/admin`
-- Username: `admin`
-- Password: `portfolio2026`
+- Username: `nehal`
+- Password: `Nehal@2026`
 
-These demo credentials are used only when environment variables are absent.
-**Set secure credentials before deployment.**
+The password is stored as a **bcrypt hash** after the first change. Both the
+username (login ID) and password can be changed from inside the panel:
+**Admin → Settings → "Change admin password" / "Change admin username (login ID)"**
+(each requires the current password). Change them after the first sign-in.
+
+Security already in place: login lockout after 5 failed attempts (15 min),
+JWT sessions (8 h), `/admin` and `/api` blocked in `robots.txt`, security
+headers on every response.
 
 ## Content policy — actual data only
 

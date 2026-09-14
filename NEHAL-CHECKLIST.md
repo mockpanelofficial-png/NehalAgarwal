@@ -66,7 +66,19 @@ python3 scripts/list_todos.py
 
 ---
 
-## 4. Nehal ko bhejne se pehle final check
+## 4. Admin login (production credentials)
+
+| Kya | Value |
+|---|---|
+| URL | site ke aage `/admin` |
+| Username | `nehal` |
+| Password | `Nehal@2026` |
+
+- Dono cheezein **panel ke andar se change** hoti hain: **Settings → "Change admin password"** aur **"Change admin username (login ID)"** (current password required).
+- Password bcrypt hash me store hota hai; 5 galat attempts par 15-min lock.
+- `.env` me yahi credentials hain (gitignored) — deploy par Render/Railway env me set karein.
+
+## 5. Nehal ko bhejne se pehle final check
 
 ```bash
 npm install

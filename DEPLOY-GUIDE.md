@@ -101,7 +101,8 @@ Cloudinary set nahi kiya to bhi site chalegi, bas uploads local disk par rahenge
 ## 🔐 Security Checklist (deploy se pehle)
 
 - [ ] `JWT_SECRET` — lambi random string (32+ chars)
-- [ ] `ADMIN_PASSWORD` — strong password (default `portfolio2026` change karo)
+- [ ] `ADMIN_USERNAME` / `ADMIN_PASSWORD` — `.env` wali values ya nayi strong values set karo
+- [ ] Panel ke Settings se username + password change karke verify karo
 - [ ] MongoDB connected (edits persist honge)
 - [ ] Cloudinary set (certificates/photos persist honge)
 - [ ] `CLIENT_ORIGIN` sirf deployed origin par set
