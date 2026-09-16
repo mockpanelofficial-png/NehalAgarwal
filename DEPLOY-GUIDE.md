@@ -49,6 +49,9 @@ CLOUDINARY_API_SECRET=
 
 5. **Create Web Service** → Render install + deploy karega (2-4 min)
 
+### Vercel frontend + Render API
+Vercel par frontend deploy karte waqt `VITE_API_URL` ko apne Render backend URL par set karo, for example `https://nehal-portfolio.onrender.com` (trailing slash ke bina). Render ke `CLIENT_ORIGIN` me `https://nehal-agarwal.vercel.app` add karo. Vercel redeploy ke baad `/api/content` 404 nahi karega.
+
 ### 4. Done! 🎉
 Render link dega: `https://nehal-portfolio.onrender.com`
 - Website: usi link par
