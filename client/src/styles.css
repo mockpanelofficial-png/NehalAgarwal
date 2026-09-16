@@ -1088,3 +1088,33 @@ html{scrollbar-color:#9db6c2 #eef4f6}
   .show-more-wrap{margin-top:18px}
   .show-more-btn{font-size:14px;padding:12px 20px}
 }
+
+/* ==== v2.9 — uniform card sizes + premium depth + hamburger theme toggle ==== */
+/* mobile: every card in a section exactly the same height (no blank/uneven cards) */
+@media(max-width:640px){
+  .card{min-height:300px}
+  .card h3{min-height:2.64em}
+  .card p{min-height:5.04em}
+  .card-footer small{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .feature{min-height:322px}
+  .feature h3{min-height:2.64em}
+  .feature p{min-height:5.04em}
+  .snap-card{min-height:200px}
+  .snap-card p{min-height:4.98em}
+}
+/* premium layered shadows — card floats, content sits lifted above it */
+[data-theme="dark"] .card,[data-theme="dark"] .feature,[data-theme="dark"] .snap-card{border-color:#2c3d59;box-shadow:0 1px 2px #000b,0 4px 10px #0008,0 12px 26px #0007,0 30px 62px #02060c8f,inset 0 1px 0 #ffffff12}
+[data-theme="dark"] .card:hover,[data-theme="dark"] .feature:hover,[data-theme="dark"] .snap-card:hover{box-shadow:0 2px 4px #000c,0 10px 22px #0009,0 26px 52px #0008,0 46px 92px #02060c99,inset 0 1px 0 #ffffff17}
+[data-theme="dark"] .card h3,[data-theme="dark"] .feature h3,[data-theme="dark"] .snap-label{text-shadow:0 2px 10px #000c,0 1px 2px #0009}
+[data-theme="dark"] .card p,[data-theme="dark"] .feature p,[data-theme="dark"] .snap-card p{text-shadow:0 1px 4px #0008}
+[data-theme="dark"] .card label,[data-theme="dark"] .card small{text-shadow:0 1px 3px #0006}
+[data-theme="light"] .card,[data-theme="light"] .feature,[data-theme="light"] .snap-card{box-shadow:0 1px 2px #0f4c5c16,0 6px 14px #0f4c5c1c,0 18px 38px #0f4c5c26,0 38px 76px #0f4c5c30,inset 0 1px 0 #ffffffcc}
+[data-theme="light"] .card:hover,[data-theme="light"] .feature:hover,[data-theme="light"] .snap-card:hover{box-shadow:0 2px 4px #0f4c5c1a,0 12px 26px #0f4c5c24,0 30px 60px #0f4c5c2e,0 52px 100px #0f4c5c38,inset 0 1px 0 #fff}
+/* theme toggle: lives in hamburger menu on phones/tablets (navbar keeps desktop only) */
+.menu-theme{display:none}
+@media(max-width:900px){
+  .premium-nav .nav-actions .theme-toggle{display:none}
+  .premium-nav .navlinks .menu-theme{display:flex;align-items:center;gap:10px;margin-top:6px;padding:12px 14px;border-radius:10px;border:1px solid #243650;background:#13233a;color:#8be9f9;font-weight:750;font-size:14px;width:100%}
+  .premium-nav .navlinks .menu-theme svg{flex:0 0 auto}
+  [data-theme="light"] .premium-nav .navlinks .menu-theme{background:#eef6f8;border-color:#d7e2e9;color:#0e7490}
+}
