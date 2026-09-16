@@ -26,7 +26,8 @@ function parseOrigins(value) {
     .filter(Boolean);
 }
 
-const allowedOrigins = parseOrigins(process.env.CLIENT_ORIGIN);
+const configuredOrigins = parseOrigins(process.env.CLIENT_ORIGIN) || [];
+const allowedOrigins = [...new Set([...configuredOrigins, 'https://nehal-agarwal.vercel.app'])];
 
 const useCloudinary = Boolean(
   process.env.CLOUDINARY_CLOUD_NAME &&
