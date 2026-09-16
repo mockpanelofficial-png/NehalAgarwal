@@ -39,6 +39,21 @@ body{font-size:17px}.premium-nav .navlinks a{font-size:16px}.journey-intro{font-
 [data-theme="light"] .hero .actions .action-contact{color:#241000}
 [data-theme="light"] .hero .actions .action-linkedin{color:#fff}
 @media(max-width:760px){.hero .actions{display:grid;grid-template-columns:1fr;gap:10px}.hero .actions .button{width:100%;justify-content:center}}
+
+/* Neon glass treatment inspired by the reference button */
+.hero .actions .button{position:relative;isolation:isolate;border-radius:9px;background:#05070d;color:#f8fbff;border-color:#1e3b5d;box-shadow:0 0 0 1px #07111e,0 0 10px #1689d94d,0 10px 24px #0009,inset 0 1px 0 #ffffff1a}
+.hero .actions .button::before{content:"";position:absolute;inset:-1px;border-radius:10px;background:linear-gradient(110deg,#0ea5e9,#2563eb 42%,#ec4899 100%);opacity:.9;z-index:-2}
+.hero .actions .button::after{content:"";position:absolute;inset:1px;border-radius:8px;background:#05070d;z-index:-1}
+.hero .actions .button:hover{color:#fff;filter:none;box-shadow:0 0 0 1px #0ea5e944,0 0 18px #0ea5e966,0 16px 34px #000b,inset 0 1px 0 #ffffff29}
+.hero .actions .button svg{color:#bdefff;filter:drop-shadow(0 0 5px #22d3ee99)}
+.hero .actions .action-email,.hero .actions .action-contact,.hero .actions .action-linkedin,.hero .actions .action-press{background:#05070d;color:#f8fbff}
+.hero .actions .action-contact::before{background:linear-gradient(110deg,#f59e0b,#f97316 42%,#ec4899)}
+.hero .actions .action-linkedin::before{background:linear-gradient(110deg,#0ea5e9,#2563eb 52%,#8b5cf6)}
+.hero .actions .action-press::before{background:linear-gradient(110deg,#64748b,#475569 52%,#a855f7)}
+
+.card,.feature,.snapshot-cards .snap-card{position:relative;isolation:isolate;border-color:#294b70;box-shadow:0 0 0 1px #07111e,0 0 16px #087fc933,0 18px 42px #0008,inset 0 1px 0 #ffffff14}
+.card::after,.feature::after,.snapshot-cards .snap-card::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,#0ea5e933,#2563eb55 48%,#ec489955);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.9}
+.card:hover,.feature.in:hover,.snapshot-cards .snap-card:hover{border-color:#2cb8f0;box-shadow:0 0 0 1px #0ea5e966,0 0 24px #0ea5e955,0 24px 58px #000b,inset 0 1px 0 #ffffff26}
 [data-theme="light"] .contact-form input,
 [data-theme="light"] .contact-form textarea{background:#f8fafc;color:#101828;border-color:#d0d5dd;box-shadow:0 8px 22px #0f4c5c0f}
 [data-theme="light"] .contact-form input::placeholder,
