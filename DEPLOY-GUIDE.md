@@ -5,7 +5,7 @@ Ye guide batata hai ki site ko **free hosting** par kaise live kare.
 
 ---
 
-## 🎯 Option A: Render.com (Recommended — Free)
+## 🎯 Option A: Render.com (Recommended)
 
 ### 1. Render account banao
 - https://render.com → "Get Started" → GitHub se signup
@@ -21,7 +21,8 @@ git remote add origin https://github.com/USERNAME/nehal-portfolio.git
 git push -u origin main
 ```
 
-### 3. Render par "Web Service" banao
+### 3. Render par deploy karo
+Is repo me `render.yaml` blueprint ready hai. Render Dashboard → **New → Blueprint** se repo select karo, phir secret values enter karo. Manual Web Service use kar rahe ho to ye settings rakho:
 1. Dashboard → **New** → **Web Service**
 2. Apna repo connect karo
 3. Settings:
@@ -53,7 +54,7 @@ Render link dega: `https://nehal-portfolio.onrender.com`
 - Website: usi link par
 - Admin: `https://nehal-portfolio.onrender.com/admin`
 
-> ⚠️ Render free tier par server 15 min inactivity me sleep ho jata hai — pehla load thoda slow
+> ⚠️ Render free tier par server inactivity me sleep ho sakta hai — pehla load thoda slow
 > hota hai (resume hota hai). Ye normal hai.
 
 ---
@@ -100,12 +101,14 @@ Cloudinary set nahi kiya to bhi site chalegi, bas uploads local disk par rahenge
 
 ## 🔐 Security Checklist (deploy se pehle)
 
+- [ ] Is chat/local `.env` me exposed MongoDB, Cloudinary, admin aur JWT credentials ko revoke/rotate karo; in values ko GitHub ya screenshots me kabhi commit na karo
 - [ ] `JWT_SECRET` — lambi random string (32+ chars)
 - [ ] `ADMIN_USERNAME` / `ADMIN_PASSWORD` — `.env` wali values ya nayi strong values set karo
 - [ ] Panel ke Settings se username + password change karke verify karo
 - [ ] MongoDB connected (edits persist honge)
 - [ ] Cloudinary set (certificates/photos persist honge)
 - [ ] `CLIENT_ORIGIN` sirf deployed origin par set
+- [ ] Deploy ke baad `/api/health`, homepage, `/admin`, contact form, LinkedIn link aur ek upload test verify karo
 - [ ] Nehal ki real email/phone/photo bhari gayi (`python3 scripts/list_todos.py` se check karo)
 
 ---
