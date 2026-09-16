@@ -1118,3 +1118,20 @@ html{scrollbar-color:#9db6c2 #eef4f6}
   .premium-nav .navlinks .menu-theme svg{flex:0 0 auto}
   [data-theme="light"] .premium-nav .navlinks .menu-theme{background:#eef6f8;border-color:#d7e2e9;color:#0e7490}
 }
+
+/* ==== v2.10 — hero stat tiles: max visibility + grabbable 3D lift ==== */
+.hero .stats div{transition:transform .25s cubic-bezier(.22,.7,.25,1),box-shadow .25s ease}
+.hero .stats div:hover{transform:translateY(-3px);box-shadow:0 2px 4px #000d,0 8px 18px #000b,0 20px 40px #02060c8a,0 40px 78px #02060c95,inset 0 1px 0 #ffffff26,inset 0 -12px 20px #00000050}
+.hero .stats div{position:relative;overflow:hidden;border:1px solid #3a5680;background:linear-gradient(160deg,#1d3355 0%,#16284a 52%,#101d36 100%);border-radius:18px;box-shadow:0 1px 2px #000c,0 5px 12px #000a,0 14px 30px #02060c85,0 30px 60px #02060c90,inset 0 1px 0 #ffffff22,inset 0 -12px 20px #00000050}
+.hero .stats div::after{content:"";position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(180deg,#ffffff17,#ffffff05 60%,transparent);pointer-events:none}
+.hero .stats b{position:relative;z-index:1;font-size:24px;color:#ffffff;text-shadow:0 0 16px #22d3ee59,0 2px 6px #000d,0 1px 2px #000a;letter-spacing:-.01em}
+.hero .stats small{position:relative;z-index:1;color:#a5bad6;text-shadow:0 1px 3px #000a,0 0 10px #0007}
+[data-theme="light"] .hero .stats div{border-color:#c9dce6;background:linear-gradient(160deg,#ffffff 0%,#f2f8fb 55%,#e8f2f7 100%);box-shadow:0 1px 2px #0f4c5c1a,0 6px 14px #0f4c5c22,0 16px 34px #0f4c5c2c,0 34px 68px #0f4c5c36,inset 0 1px 0 #fff,inset 0 -12px 20px #0f4c5c0d}
+[data-theme="light"] .hero .stats div::after{background:linear-gradient(180deg,#ffffffcc,#ffffff00)}
+[data-theme="light"] .hero .stats b{color:#0b1626;text-shadow:0 1px 0 #fff,0 2px 6px #0f4c5c26}
+[data-theme="light"] .hero .stats small{color:#51637a;text-shadow:0 1px 0 #ffffffb3}
+@media(max-width:640px){
+  .hero .stats div{padding:13px 6px;border-radius:14px}
+  .hero .stats b{font-size:19px}
+  .hero .stats small{font-size:9.5px;line-height:1.45}
+}
