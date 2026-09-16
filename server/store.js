@@ -19,6 +19,8 @@ const normalize = (data) => {
 const needsRepair = (doc) =>
   !doc?.site?.profileCards?.length || !doc?.site?.sections || !doc?.site?.meta;
 
+const belongsToSeed = (doc, seed) => !doc?.site?.name || doc.site.name === seed.site.name;
+
 const mergeSite = (current = {}, seed = {}) => ({
   ...seed,
   ...current,
@@ -42,6 +44,15 @@ exports.get = async () => {
 
     if (!doc) {
       doc = (await Content.create({ ...seed, key: 'main' })).toObject();
+      return doc;
+    }
+
+    if (!belongsToSeed(doc, seed)) {
+      doc = await Content.findOneAndUpdate(
+        { key: 'main' },
+        { $set: { site: seed.site, timeline: seed.timeline, items: seed.items } },
+        { new: true }
+      ).lean();
       return doc;
     }
 
