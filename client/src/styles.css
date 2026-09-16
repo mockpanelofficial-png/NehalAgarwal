@@ -62,6 +62,20 @@ body{font-size:17px}.premium-nav .navlinks a{font-size:16px}.journey-intro{font-
 .profile:hover,.skills-block:hover,.manifesto:hover,.proof-item:hover{border-color:#2cb8f0;box-shadow:0 0 0 1px #0ea5e966,0 0 24px #0ea5e955,0 24px 58px #000b,inset 0 1px 0 #ffffff26}
 [data-theme="light"] .profile,[data-theme="light"] .skills-block,[data-theme="light"] .manifesto,[data-theme="light"] .proof-item{background:linear-gradient(150deg,#ffffff,#f4f9fb 58%,#eef4f9);border-color:#c9dfe8;box-shadow:0 0 0 1px #d7e8ee,0 0 16px #0e94ad1c,0 18px 42px #0f4c5c24,inset 0 1px 0 #fff}
 [data-theme="light"] .profile:hover,[data-theme="light"] .skills-block:hover,[data-theme="light"] .manifesto:hover,[data-theme="light"] .proof-item:hover{border-color:#0e94ad;box-shadow:0 0 0 1px #0e94ad55,0 0 24px #0e94ad33,0 24px 58px #0f4c5c2e,inset 0 1px 0 #fff}
+
+/* Keep the neon frame outside the surface; never draw a second line through content. */
+.hero .actions .button::before,.hero .actions .button::after,
+.card::after,.feature::after,.snapshot-cards .snap-card::after,
+.profile::after,.skills-block::after,.manifesto::after,.proof-item::after{display:none}
+.hero .actions .button{border:1px solid #159de2;background:#05070d;color:#f8fbff!important;box-shadow:0 0 0 1px #07111e,0 0 9px #1689d966,0 10px 24px #0009}
+.hero .actions .button:hover{border-color:#ec4899;box-shadow:0 0 0 1px #0ea5e966,0 0 18px #0ea5e988,0 16px 34px #000b}
+.hero .actions .action-contact{border-color:#f97316;background:#08080c;color:#fff7ed!important}
+.hero .actions .action-linkedin{border-color:#2563eb;background:#05080e;color:#eff6ff!important}
+.hero .actions .action-press{border-color:#64748b;background:#080b12;color:#f8fafc!important}
+.hero .actions .button svg{color:#bdefff!important}
+.card,.feature,.snapshot-cards .snap-card,.profile,.skills-block,.manifesto,.proof-item{border:1px solid #27618b;box-shadow:0 0 0 1px #07111e,0 0 12px #087fc955,0 18px 42px #0009}
+.card:hover,.feature.in:hover,.snapshot-cards .snap-card:hover,.profile:hover,.skills-block:hover,.manifesto:hover,.proof-item:hover{border-color:#22b8ee;box-shadow:0 0 0 1px #0ea5e977,0 0 22px #0ea5e977,0 24px 58px #000b}
+[data-theme="light"] .card,[data-theme="light"] .feature,[data-theme="light"] .snapshot-cards .snap-card,[data-theme="light"] .profile,[data-theme="light"] .skills-block,[data-theme="light"] .manifesto,[data-theme="light"] .proof-item{border-color:#93c9d8;box-shadow:0 0 0 1px #d7e8ee,0 0 12px #0e94ad2b,0 18px 42px #0f4c5c28}
 [data-theme="light"] .contact-form input,
 [data-theme="light"] .contact-form textarea{background:#f8fafc;color:#101828;border-color:#d0d5dd;box-shadow:0 8px 22px #0f4c5c0f}
 [data-theme="light"] .contact-form input::placeholder,
