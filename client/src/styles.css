@@ -76,6 +76,9 @@ body{font-size:17px}.premium-nav .navlinks a{font-size:16px}.journey-intro{font-
 .card,.feature,.snapshot-cards .snap-card,.profile,.skills-block,.manifesto,.proof-item{border:1px solid #27618b;box-shadow:0 0 0 1px #07111e,0 0 12px #087fc955,0 18px 42px #0009}
 .card:hover,.feature.in:hover,.snapshot-cards .snap-card:hover,.profile:hover,.skills-block:hover,.manifesto:hover,.proof-item:hover{border-color:#22b8ee;box-shadow:0 0 0 1px #0ea5e977,0 0 22px #0ea5e977,0 24px 58px #000b}
 [data-theme="light"] .card,[data-theme="light"] .feature,[data-theme="light"] .snapshot-cards .snap-card,[data-theme="light"] .profile,[data-theme="light"] .skills-block,[data-theme="light"] .manifesto,[data-theme="light"] .proof-item{border-color:#93c9d8;box-shadow:0 0 0 1px #d7e8ee,0 0 12px #0e94ad2b,0 18px 42px #0f4c5c28}
+[data-theme="light"] .direct-lines .direct-email{background:linear-gradient(135deg,#ffffff,#eaf6ff)!important;color:#075985!important;border:1px solid #38a5d8!important;box-shadow:0 0 0 1px #d8f2ff,0 8px 22px #0e749033!important;font-weight:800}
+[data-theme="light"] .direct-lines .direct-email svg{color:#0369a1!important;opacity:1}
+[data-theme="light"] .direct-lines .direct-email:hover{background:#e0f2fe!important;color:#0c4a6e!important;border-color:#0284c7!important;box-shadow:0 0 18px #0284c766,0 12px 28px #0e749044!important}
 [data-theme="light"] .contact-form input,
 [data-theme="light"] .contact-form textarea{background:#f8fafc;color:#101828;border-color:#d0d5dd;box-shadow:0 8px 22px #0f4c5c0f}
 [data-theme="light"] .contact-form input::placeholder,
