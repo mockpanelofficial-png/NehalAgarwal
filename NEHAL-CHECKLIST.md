@@ -11,7 +11,7 @@ posting, placeholder award ya speculative sample nahi bacha.
 | Cheez | Value | Source |
 |---|---|---|
 | Photo | `client/public/profile-photo.png` (clean crop, frame removed) | di gayi image |
-| Framed original | `client/public/profile-photo-linkedin-framed.png` (#OPENTOWORK version, archive) | di gayi image |
+| Framed original | `archive/profile-photo-linkedin-framed.png` (#OPENTOWORK version, archive) | di gayi image |
 | Email | nehalagarwal@gmail.com | diye gaye details |
 | Phone | +91 98979 49692 (contact section me `tel:` link ke saath) | diye gaye details |
 | Headline / tagline | Final-Year MBBS Student \| Medical Content Writing \| Healthcare Communication \| Medical Education \| Content Creation | LinkedIn headline |

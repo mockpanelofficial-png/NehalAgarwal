@@ -143,7 +143,7 @@ npm start
 
 - Nehal ki real photo lagi hui hai: `client/public/profile-photo.png`
   (LinkedIn #OPENTOWORK frame programmatic crop se hataya gaya hai).
-- Framed original archive me hai: `client/public/profile-photo-linkedin-framed.png`
+- Framed original archive me hai: `archive/profile-photo-linkedin-framed.png`
 - Badalni ho to: photo replace karo, **ya** admin panel → Profile → `Profile image` field.
 - Fallback placeholder (bina photo ke): `client/public/profile-photo.svg`
 
