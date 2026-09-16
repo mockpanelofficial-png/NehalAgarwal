@@ -1186,3 +1186,21 @@ html{scrollbar-color:#9db6c2 #eef4f6}
 /* robust centering: scroll the backdrop, auto margins keep modal fully visible */
 .overlay{padding:20px 14px;overflow-y:auto}
 .modal{margin:auto;max-height:calc(100dvh - 32px)}
+
+/* ==== v2.14 — hero CTAs side-by-side on mobile, premium pair ==== */
+@media(max-width:640px){
+  .hero .actions{flex-direction:row;align-items:stretch;gap:10px;width:100%;margin:0 0 26px}
+  .hero .actions .button{flex:1 1 0;min-width:0;justify-content:center;padding:14px 10px;font-size:14.5px;white-space:nowrap;letter-spacing:.01em}
+}
+@media(max-width:400px){
+  .hero .actions{gap:8px}
+  .hero .actions .button{font-size:13px;padding:13px 8px}
+}
+.hero .actions .button{transition:transform .22s cubic-bezier(.22,.7,.25,1),box-shadow .22s ease,background .22s ease,color .22s ease}
+.hero .actions .button:hover{transform:translateY(-2px)}
+.hero .actions .button:first-child{background:linear-gradient(90deg,#0ea5c4 0%,#22d3ee 60%,#67e8f9 100%);color:#07101f;font-weight:900;box-shadow:0 3px 8px #00000045,0 10px 24px #22d3ee40,0 22px 44px #0ea5c433,inset 0 1px 0 #ffffff66}
+.hero .actions .button:first-child:hover{box-shadow:0 4px 10px #00000050,0 14px 30px #22d3ee52,0 28px 56px #0ea5c440,inset 0 1px 0 #ffffff73}
+[data-theme="dark"] .hero .actions .button:last-child{background:linear-gradient(155deg,#1b2c4a 0%,#13203a 60%,#0e1830 100%);border:1px solid #3b5081;color:#cfe3f7;font-weight:850;box-shadow:0 3px 8px #00000050,0 10px 24px #02060c80,0 22px 44px #02060c8a,inset 0 1px 0 #ffffff1f}
+[data-theme="dark"] .hero .actions .button:last-child:hover{border-color:#5273b0;color:#ffffff;box-shadow:0 4px 10px #00000059,0 14px 30px #02060c8a,0 28px 56px #02060c93,inset 0 1px 0 #ffffff26}
+[data-theme="light"] .hero .actions .button:last-child{background:linear-gradient(155deg,#ffffff,#eef4f9);border:1px solid #cfdfe9;color:#0c1826;font-weight:850;box-shadow:0 3px 8px #0f4c5c18,0 10px 24px #0f4c5c22,0 22px 44px #0f4c5c2b,inset 0 1px 0 #fff}
+[data-theme="light"] .hero .actions .button:last-child:hover{border-color:#9fc3d4;box-shadow:0 4px 10px #0f4c5c1f,0 14px 30px #0f4c5c2a,0 28px 56px #0f4c5c33,inset 0 1px 0 #fff}
