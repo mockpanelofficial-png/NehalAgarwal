@@ -54,6 +54,14 @@ body{font-size:17px}.premium-nav .navlinks a{font-size:16px}.journey-intro{font-
 .card,.feature,.snapshot-cards .snap-card{position:relative;isolation:isolate;border-color:#294b70;box-shadow:0 0 0 1px #07111e,0 0 16px #087fc933,0 18px 42px #0008,inset 0 1px 0 #ffffff14}
 .card::after,.feature::after,.snapshot-cards .snap-card::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,#0ea5e933,#2563eb55 48%,#ec489955);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.9}
 .card:hover,.feature.in:hover,.snapshot-cards .snap-card:hover{border-color:#2cb8f0;box-shadow:0 0 0 1px #0ea5e966,0 0 24px #0ea5e955,0 24px 58px #000b,inset 0 1px 0 #ffffff26}
+.profile,.skills-block,.manifesto,.proof-item{border-color:#294b70;box-shadow:0 0 0 1px #07111e,0 0 16px #087fc933,0 18px 42px #0008,inset 0 1px 0 #ffffff14}
+.profile,.skills-block,.manifesto,.proof-item{background:linear-gradient(150deg,#172b4c,#0e1b34 58%,#0a1428)}
+.profile::after,.skills-block::after,.manifesto::after,.proof-item::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,#0ea5e933,#2563eb55 48%,#ec489955);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.9}
+.profile,.skills-block,.manifesto{position:relative;isolation:isolate}
+.proof-item{position:relative;isolation:isolate}
+.profile:hover,.skills-block:hover,.manifesto:hover,.proof-item:hover{border-color:#2cb8f0;box-shadow:0 0 0 1px #0ea5e966,0 0 24px #0ea5e955,0 24px 58px #000b,inset 0 1px 0 #ffffff26}
+[data-theme="light"] .profile,[data-theme="light"] .skills-block,[data-theme="light"] .manifesto,[data-theme="light"] .proof-item{background:linear-gradient(150deg,#ffffff,#f4f9fb 58%,#eef4f9);border-color:#c9dfe8;box-shadow:0 0 0 1px #d7e8ee,0 0 16px #0e94ad1c,0 18px 42px #0f4c5c24,inset 0 1px 0 #fff}
+[data-theme="light"] .profile:hover,[data-theme="light"] .skills-block:hover,[data-theme="light"] .manifesto:hover,[data-theme="light"] .proof-item:hover{border-color:#0e94ad;box-shadow:0 0 0 1px #0e94ad55,0 0 24px #0e94ad33,0 24px 58px #0f4c5c2e,inset 0 1px 0 #fff}
 [data-theme="light"] .contact-form input,
 [data-theme="light"] .contact-form textarea{background:#f8fafc;color:#101828;border-color:#d0d5dd;box-shadow:0 8px 22px #0f4c5c0f}
 [data-theme="light"] .contact-form input::placeholder,
