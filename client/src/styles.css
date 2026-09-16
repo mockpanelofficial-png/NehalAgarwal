@@ -27,6 +27,18 @@ body{font-size:17px}.premium-nav .navlinks a{font-size:16px}.journey-intro{font-
 [data-theme="light"] .contact-section:after{background:radial-gradient(circle at 50% 115%,#14b8d414,transparent 40%)}
 [data-theme="light"] .contact-heading h2{color:#101828}
 [data-theme="light"] .contact-heading p{color:#5b6b7d}
+
+/* Hero actions: one premium shape, distinct action colors */
+.hero .actions{display:flex;flex-wrap:wrap;gap:11px;align-items:center}
+.hero .actions .button{min-height:50px;padding:13px 18px;border:1px solid transparent;border-radius:999px;box-shadow:0 4px 9px #0005,0 12px 25px #0006,inset 0 1px 0 #ffffff66;transition:transform .22s ease,box-shadow .22s ease,filter .22s ease}
+.hero .actions .button:hover{transform:translateY(-3px);filter:saturate(1.12);box-shadow:0 6px 12px #0006,0 18px 35px #0008,inset 0 1px 0 #ffffff80}
+.hero .actions .action-email{background:linear-gradient(135deg,#0ea5c4,#22d3ee 62%,#67e8f9);color:#061522;font-weight:900}
+.hero .actions .action-contact{background:linear-gradient(135deg,#f59e0b,#f97316 62%,#fb923c);color:#241000;font-weight:900}
+.hero .actions .action-linkedin{background:linear-gradient(135deg,#2867b2,#0a82c9 62%,#38bdf8);color:#f5fbff;font-weight:900}
+.hero .actions .action-press{background:linear-gradient(135deg,#334155,#475569 62%,#64748b);color:#f8fafc;font-weight:850}
+[data-theme="light"] .hero .actions .action-contact{color:#241000}
+[data-theme="light"] .hero .actions .action-linkedin{color:#fff}
+@media(max-width:760px){.hero .actions{display:grid;grid-template-columns:1fr;gap:10px}.hero .actions .button{width:100%;justify-content:center}}
 [data-theme="light"] .contact-form input,
 [data-theme="light"] .contact-form textarea{background:#f8fafc;color:#101828;border-color:#d0d5dd;box-shadow:0 8px 22px #0f4c5c0f}
 [data-theme="light"] .contact-form input::placeholder,

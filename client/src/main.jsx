@@ -58,7 +58,7 @@ function App(){
     <h1 className="intro-title">Hi, I'm <em>{s.name}</em></h1>
     <TypingRole roles={s.roles}/>
     <p className="journey-intro">{s.lede}</p>
-    <div className="actions"><a className="button" href="#work">Explore Portfolio ↓</a><a className="button ghost" href="#contact">Get In Touch</a>{s.pressUrl&&<a className="button ghost" href={s.pressUrl} target="_blank" rel="noopener noreferrer">Press Feature ↗</a>}</div>
+    <div className="actions"><a className="button action-email" href={`mailto:${s.email}`}><Mail size={16}/> Email</a><a className="button action-contact" href="#contact"><Send size={16}/> Get In Touch</a><a className="button action-linkedin" href={s.linkedin||'https://www.linkedin.com/in/nehal-agarwal-6529a429a/'} target="_blank" rel="noopener noreferrer"><ExternalLink size={16}/> LinkedIn</a>{s.pressUrl&&<a className="button action-press" href={s.pressUrl} target="_blank" rel="noopener noreferrer">Press Feature ↗</a>}</div>
     <div className="hero-timeline">{data.timeline.map((x,i)=><article key={i} role="button" tabIndex={0} onClick={()=>setPop({type:'journey',x})} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setPop({type:'journey',x})}}}><div className="hero-year">{x.date}</div><div><h3>{x.title}</h3><p>{x.text}</p></div></article>)}</div>
   </div>
   <aside className="profile">
