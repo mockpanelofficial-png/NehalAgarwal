@@ -698,6 +698,24 @@ header.scrolled{background:rgba(10,20,36,.82);backdrop-filter:blur(20px);-webkit
 /* ==== BIGGER PARAGRAPHS after headings (readability) ==== */
 .hero-timeline p{font-size:18px;line-height:1.75}
 .hero-timeline h3{font-size:22px}
+
+/* ==== Final premium card system ==== */
+.cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.card,.feature,.snapshot-cards .snap-card{border-radius:26px;box-shadow:0 4px 10px #0004,0 16px 34px #0005,0 34px 76px #020611aa,inset 0 1px 0 #ffffff18}
+.card{display:flex;flex-direction:column;min-height:344px;padding:27px 26px 23px;background:linear-gradient(150deg,#1c3158,#111d38 58%,#0c162c);border-color:#415b8a}
+.card-top{flex:0 0 44px}
+.card h3{flex:0 0 auto}
+.card p{flex:1 1 auto}
+.card-footer{margin-top:22px}
+.feature{box-shadow:0 4px 10px #0004,0 18px 40px #0006,0 38px 82px #020611aa,inset 0 1px 0 #ffffff18}
+.snapshot-cards .snap-card{box-shadow:0 4px 10px #0004,0 16px 34px #0005,0 30px 68px #02061199,inset 0 1px 0 #ffffff18}
+.direct-lines{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:18px;margin-top:24px}
+.direct-lines .direct-email{display:inline-flex;align-items:center;gap:7px;padding:10px 15px;border:1px solid #2f5372;border-radius:999px;background:#10223b;color:#9feaf5;text-decoration:none;box-shadow:0 8px 20px #0004;transition:.25s ease}
+.direct-lines .direct-email:hover{transform:translateY(-2px);border-color:#22d3ee;color:#d9fbff;box-shadow:0 14px 30px #0007,0 0 20px #22d3ee22}
+[data-theme="light"] .card,[data-theme="light"] .feature,[data-theme="light"] .snapshot-cards .snap-card{box-shadow:0 4px 10px #0f4c5c18,0 16px 34px #0f4c5c24,0 34px 76px #0f4c5c26,inset 0 1px 0 #fff}
+[data-theme="light"] .direct-lines .direct-email{background:#fff;color:#0e8195;border-color:#b9dce4;box-shadow:0 8px 20px #0f4c5c14}
+@media(max-width:1100px){.cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{padding:22px 20px 20px}.card h3{font-size:20px}.card p{font-size:15px}}
+@media(max-width:760px){.cards,.features,.snapshot-cards{grid-template-columns:1fr;gap:16px}.card{min-height:300px;padding:24px 20px 20px;border-radius:23px}.card h3{font-size:22px}.card p{font-size:15.5px}.direct-lines{align-items:stretch;flex-direction:column;gap:10px}.direct-lines .direct-email{justify-content:center}}
 .journey-intro{font-size:20px;line-height:1.78}
 .section-head p{font-size:19px;line-height:1.72}
 .snapshot-cards p,.snap-card p{font-size:17px;line-height:1.72}
