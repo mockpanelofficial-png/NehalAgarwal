@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://shreyansh-sharma.onrender.com/api/:path*"
+    },
+    {
+      "source": "/uploads/:path*",
+      "destination": "https://shreyansh-sharma.onrender.com/uploads/:path*"
+    }
+  ]
+}
