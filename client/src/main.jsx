@@ -4,7 +4,8 @@ import{createPortal}from'react-dom';
 import{ArrowUpRight,X,Lock,Plus,Pencil,Trash2,LogOut,Upload,Save,ExternalLink,BookOpen,Trophy,BriefcaseBusiness,Users,Rocket,GraduationCap,Medal,FlaskConical,Lightbulb,BadgeCheck,HeartHandshake,Mail,Send,MapPin,Sun,Moon,Menu,Newspaper,Search,PenLine,ChevronDown,ChevronUp,ChevronLeft,ChevronRight,TrendingUp,Landmark,Wallet,Award,Network,Sparkles,Compass,LayoutDashboard,FileText,UserRound,Clock,ShieldCheck,Eye,Palette,ArrowUp,Settings2,Stethoscope,Activity,HeartPulse,Syringe,ClipboardList,Presentation,Pill,Microscope}from'lucide-react';
 import'./styles.css';
 
-const apiBase=(import.meta.env.VITE_API_URL||'').replace(/\/$/,'');
+const isVercelHost=typeof window!=='undefined'&&window.location.hostname.endsWith('.vercel.app');
+const apiBase=(isVercelHost?'':(import.meta.env.VITE_API_URL||'')).replace(/\/$/,'');
 const api=async(path,options={})=>{const token=localStorage.getItem('na-token');const r=await fetch(apiBase+'/api'+path,{...options,headers:{...(options.body instanceof FormData?{}:{'Content-Type':'application/json'}),...(token?{Authorization:'Bearer '+token}:{}),...options.headers}});const data=await r.json().catch(()=>({}));if(!r.ok)throw Error(data.message||'Request failed');return data};
 const blank=()=>({customId:crypto.randomUUID(),title:'',org:'',category:'Clinical',date:'',summary:'',description:'',featured:false,proofs:[]});
 const categoryMeta={Clinical:[Stethoscope,'teal'],Research:[Microscope,'violet'],Writing:[PenLine,'blue'],'Health Education':[HeartPulse,'rose'],Education:[GraduationCap,'green'],'Community Health':[Activity,'cyan'],Volunteering:[HeartHandshake,'rose'],Leadership:[Users,'indigo'],Programs:[Presentation,'purple'],Certifications:[BadgeCheck,'teal'],Awards:[Medal,'amber'],Media:[Newspaper,'cyan'],Projects:[ClipboardList,'slate'],Roles:[UserRound,'gold'],Internships:[BriefcaseBusiness,'slate'],Competitions:[Trophy,'gold']}
