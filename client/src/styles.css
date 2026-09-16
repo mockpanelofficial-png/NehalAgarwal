@@ -1135,3 +1135,21 @@ html{scrollbar-color:#9db6c2 #eef4f6}
   .hero .stats b{font-size:19px}
   .hero .stats small{font-size:9.5px;line-height:1.45}
 }
+
+/* ==== v2.11 — deeper premium shadows + royal sapphire & champagne gold ==== */
+[data-theme="dark"] .card{background:linear-gradient(155deg,#1a2a4d 0%,#141f3c 45%,#0e1830 100%);border-color:#3b5081}
+[data-theme="dark"] .snap-card{background:linear-gradient(155deg,#19294b 0%,#131e3a 48%,#0d172e 100%);border-color:#3a4f80}
+[data-theme="dark"] .card,[data-theme="dark"] .snap-card{box-shadow:0 2px 4px #000c,0 8px 18px #000a,0 20px 44px #0009,0 44px 88px #02060c99,0 72px 140px #04081d85,0 0 44px #6d5dfc12,inset 0 1px 0 #ffffff16}
+[data-theme="dark"] .card:hover,[data-theme="dark"] .snap-card:hover{box-shadow:0 3px 6px #000d,0 12px 26px #000b,0 28px 56px #000a,0 60px 110px #02060ca1,0 92px 170px #04081d8c,0 0 54px #6d5dfc1a,inset 0 1px 0 #ffffff1a}
+[data-theme="dark"] .feature{box-shadow:0 2px 4px #000c,0 8px 18px #000a,0 22px 46px #0009,0 46px 92px #02060c99,0 76px 145px #04081d85,inset 0 1px 0 #ffffff1f}
+[data-theme="dark"] .feature:hover{box-shadow:0 3px 6px #000d,0 12px 26px #000b,0 30px 58px #000a,0 62px 115px #02060ca1,0 95px 175px #04081d8c,inset 0 1px 0 #ffffff24}
+/* stat tiles: royal sapphire + champagne gold numerals */
+[data-theme="dark"] .hero .stats div{background:linear-gradient(160deg,#28427a 0%,#1c2f5c 50%,#152344 100%);border-color:#5273b0;box-shadow:0 2px 4px #000c,0 8px 18px #000a,0 20px 42px #02060c90,0 42px 84px #02060c96,0 68px 130px #04081d8a,0 0 40px #22d3ee10,inset 0 1px 0 #ffffff26,inset 0 -12px 20px #00000055}
+[data-theme="dark"] .hero .stats b{color:#f7d998;text-shadow:0 0 18px #f2c14e66,0 2px 6px #000d,0 1px 2px #000a}
+[data-theme="dark"] .hero .stats small{color:#bccbe4}
+/* light theme: ivory cards + deeper blue-grey depth */
+[data-theme="light"] .card{background:linear-gradient(155deg,#ffffff 0%,#f8fbfd 55%,#eef4f9 100%);border-color:#dfe8ee}
+[data-theme="light"] .card,[data-theme="light"] .snap-card,[data-theme="light"] .feature{box-shadow:0 2px 4px #0f4c5c18,0 8px 18px #0f4c5c1e,0 20px 42px #0f4c5c28,0 44px 86px #0f4c5c32,0 70px 130px #0f4c5c3a,inset 0 1px 0 #fff}
+[data-theme="light"] .card:hover,[data-theme="light"] .snap-card:hover,[data-theme="light"] .feature:hover{box-shadow:0 3px 6px #0f4c5c1c,0 12px 26px #0f4c5c24,0 28px 56px #0f4c5c2e,0 58px 108px #0f4c5c38,0 88px 160px #0f4c5c40,inset 0 1px 0 #fff}
+[data-theme="light"] .hero .stats div{background:linear-gradient(160deg,#ffffff 0%,#f4f9fc 50%,#e9f1f7 100%);border-color:#cfdfe9;box-shadow:0 2px 4px #0f4c5c1a,0 8px 18px #0f4c5c20,0 20px 42px #0f4c5c2a,0 44px 86px #0f4c5c34,0 70px 130px #0f4c5c3c,inset 0 1px 0 #fff,inset 0 -12px 20px #0f4c5c0f}
+[data-theme="light"] .hero .stats b{color:#8f6a12;text-shadow:0 1px 0 #fff,0 2px 8px #f2c14e40}
